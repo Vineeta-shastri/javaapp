@@ -3,7 +3,8 @@ pipeline
 agent any
 stages{
 stage{
-   steps('Build){
+   steps('Build'){
+      sh 'echo hello'
    }
 }
 }
