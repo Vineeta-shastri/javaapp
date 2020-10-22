@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pipeline {
 
     agent any
@@ -60,6 +61,18 @@ pipeline {
                 """
             }
         }
+=======
+pipeline
+{
+agent any
+stages{
+stage{
+   steps('Build'){
+      sh 'echo hello'
+   }
+}
+}
+>>>>>>> b23d921ff8c386440d8a0c1f6fbb3c153615f1fb
 
     }   
 }
