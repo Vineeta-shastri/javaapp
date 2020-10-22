@@ -46,33 +46,6 @@ pipeline {
             }
         }
 
-        stage('Build Deploy Code') {
-            when {
-                branch 'develop'
-            }
-            steps {
-                sh """
-                echo "Building Artifact"
-                """
 
-                sh """
-                echo "Deploying Code"
-                """
-            }
-        }
-
-pipeline
-{
-agent any
-stages{
-stage{
-   steps('Build'){
-      sh 'echo hello'
-   }
-}
-}
-
-
-    }   
 }
 }
