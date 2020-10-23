@@ -25,6 +25,10 @@ pipeline {
             }
         }
 
-
+      stage('Compile') {
+            steps {
+                gradlew('clean', 'classes')
+            }
+        }
 }
 }
