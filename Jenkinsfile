@@ -2,7 +2,18 @@ pipeline {
 
     agent any
 
+    tools
+    {
+      gradle "gradle 6.7"
+    }
+
     stages {
+       stage('Cleanup Workspace') {
+                  steps {
+                      cleanWs()
+                      bat ' echo done '
+                  }
+              }
         
       stage('Code Checkout') {
             steps {
