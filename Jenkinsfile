@@ -4,11 +4,13 @@ pipeline {
 
     stages {
         
-        stage('Cleanup Workspace') {
+      stage('Code Checkout') {
             steps {
-                sh """
-                echo "Cleaned Up Workspace For Project"
-                """
+                checkout([
+                    $class: 'GitSCM', 
+                    branches: [[name: 'master']], 
+                    userRemoteConfigs: [[url: 'https://github.com/Vineeta-shastri/javaapp.git']]
+                ])
             }
         }
 
