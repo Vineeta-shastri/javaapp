@@ -27,7 +27,7 @@ pipeline {
 
       stage('Compile') {
             steps {
-                gradlew('clean', 'classes')
+                bat 'gradlew.bat clean build'
             }
         }
 }
